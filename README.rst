@@ -23,21 +23,21 @@ Build
 Install
 =======
 
-* Install in default running emulator using `ant`
+* Install in default running emulator using `ant`::
 
-    `$ ant installd`
+    $ ant installd
 
-* Install in default running emulator using `adb`
+* Install in default running emulator using `adb`::
 
-    `$ adb -e install -s bin/sensors_test-debug.apk`
+    $ adb -e install -s bin/sensors_test-debug.apk
 
-* You can combine compile and installation using `ant`
+* You can combine compile and installation using `ant`::
 
-    `$ ant debug install`
+    $ ant debug install
 
-* Install in default device
+* Install in default device::
 
-    `$ adb -d install -s bin/sensors_test-debug.apk`
+    $ adb -d install -s bin/sensors_test-debug.apk
 
 
 
