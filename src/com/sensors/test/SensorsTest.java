@@ -9,6 +9,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorManager;
 import android.hardware.SensorEventListener;
+import java.text.DecimalFormat;
 
 
 public class SensorsTest extends Activity implements SensorEventListener {
@@ -91,18 +92,19 @@ public class SensorsTest extends Activity implements SensorEventListener {
                 SensorManager.getOrientation(mR, mLoc);
 
                 //set text in view
-                accX.setText(String.valueOf(mAcc[0]));
-                accY.setText(String.valueOf(mAcc[1]));
-                accZ.setText(String.valueOf(mAcc[2]));
-                magX.setText(String.valueOf(mMag[0]));
-                magY.setText(String.valueOf(mMag[1]));
-                magZ.setText(String.valueOf(mMag[2]));
-                locAzimuth.setText(String.valueOf(mLoc[0]));
-                locPitch.setText(String.valueOf(mLoc[1]));
-                locRoll.setText(String.valueOf(mLoc[2]));
-                locAzimuthD.setText(String.valueOf(Math.toDegrees(mLoc[0])));
-                locPitchD.setText(String.valueOf(Math.toDegrees(mLoc[1])));
-                locRollD.setText(String.valueOf(Math.toDegrees(mLoc[2])));
+                DecimalFormat df = new DecimalFormat("###.####");
+                accX.setText(df.format(mAcc[0]));
+                accY.setText(df.format(mAcc[1]));
+                accZ.setText(df.format(mAcc[2]));
+                magX.setText(df.format(mMag[0]));
+                magY.setText(df.format(mMag[1]));
+                magZ.setText(df.format(mMag[2]));
+                locAzimuth.setText(df.format(mLoc[0]));
+                locPitch.setText(df.format(mLoc[1]));
+                locRoll.setText(df.format(mLoc[2]));
+                locAzimuthD.setText(df.format(Math.toDegrees(mLoc[0])));
+                locPitchD.setText(df.format(Math.toDegrees(mLoc[1])));
+                locRollD.setText(df.format(Math.toDegrees(mLoc[2])));
             }
         }
     }
